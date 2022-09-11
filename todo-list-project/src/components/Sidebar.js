@@ -26,14 +26,14 @@ function Sidebar() {
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Notes</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
+        <Offcanvas.Body >
           <p className="mb-0">
             This is content within a container.
           </p>
         </Offcanvas.Body>
         <Offcanvas.Body>
           <p className="mb-0">
-            This is content within a container 2.
+            This is content within a container 3.
           </p>
         </Offcanvas.Body>
       </Offcanvas>

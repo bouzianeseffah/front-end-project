@@ -19,8 +19,9 @@ function Nav() {
             Docket
           </Navbar.Brand>
           <Navbar.Brand >
-            Welcome back, name
+            Welcome, name
           </Navbar.Brand>
+          {/* Light dark mode button */}
           <Navbar.Brand href="#home">
             Light/Dark Mode
           </Navbar.Brand>

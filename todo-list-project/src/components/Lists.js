@@ -1,7 +1,6 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
 
-
 export default function Lists() {
  return (
   <div className="lists-container">
