@@ -1,5 +1,45 @@
 
-/* Body */
+/* General */
+hr {
+ height: 1rem;
+  width: 100vw;
+}
+
+
+/* Sidebar */
 .content-container {
  display: flex;
+}
+
+.sidebar button {
+ margin: 1rem 0 1rem 1rem;
+ color: black;
+ background-color: transparent;
+ border: 1px solid rgb(13,202,240);
+ font-weight: bolder;
+}
+
+.d-none {
+ width: 30rem;
+}
+
+.offcanvas-header {
+ border-bottom: 1px solid rgb(13, 202, 240);
+}
+
+.offcanvas-title {
+ margin-left: 1rem;
+}
+
+.offcanvas-body {
+ margin: 0 1rem;
+}
+
+/* Lists */
+.lists-container {
+ padding: 1rem;
+}
+
+.list-card {
+ max-width: 100%;
 }

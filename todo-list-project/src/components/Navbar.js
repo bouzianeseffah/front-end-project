@@ -18,8 +18,8 @@ function Nav() {
             />{' '}
             Docket
           </Navbar.Brand>
-          <Navbar.Brand href="#home">
-            Home
+          <Navbar.Brand >
+            Welcome back, name
           </Navbar.Brand>
           <Navbar.Brand href="#home">
             Light/Dark Mode

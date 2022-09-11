@@ -3,6 +3,9 @@ import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
+// image
+import ArrowRight from '../images/arrow-right.svg'
+
 function Sidebar() {
   const [show, setShow] = useState(false);
 
@@ -11,25 +14,26 @@ function Sidebar() {
 
   return (
     <div className='sidebar'>
-      <Button variant="primary" className="d-lg-none" onClick={handleShow}>
-        Launch
+      <Button className="d-lg-none sidebar-popout-button" onClick={handleShow}>
+        <img src={ArrowRight} width='20rem' height='20rem' />
       </Button>
 
-      <Alert variant="info" className="d-none d-lg-block"
-       style={{
-        width: '30rem'
-       }}
-      >
-        Resize your browser to show the responsive offcanvas toggle.
+      <Alert variant="info" className="d-none d-lg-block">
+        NOTES
       </Alert>
 
       <Offcanvas show={show} onHide={handleClose} responsive="lg">
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Responsive offcanvas</Offcanvas.Title>
+          <Offcanvas.Title>Notes</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <p className="mb-0">
-            This is content within an <code>.offcanvas-lg</code>.
+            This is content within a container.
+          </p>
+        </Offcanvas.Body>
+        <Offcanvas.Body>
+          <p className="mb-0">
+            This is content within a container 2.
           </p>
         </Offcanvas.Body>
       </Offcanvas>
