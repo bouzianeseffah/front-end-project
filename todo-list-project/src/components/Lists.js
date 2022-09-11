@@ -7,7 +7,7 @@ export default function Lists() {
    <Card border="info" className="list-card">
      {/* <Card.Header>Header</Card.Header> */}
      <Card.Body >
-       <Card.Title>Info Card Title</Card.Title>
+       <Card.Title>Info Card page</Card.Title>
        <Card.Text>
          Some quick example text to build on the card title and make up the
          bulk of the card's content.
