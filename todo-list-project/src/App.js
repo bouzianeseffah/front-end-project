@@ -1,13 +1,22 @@
-import homePage from './Components/home'
-import productPage from './Components/product'
+// DEPENDENCIES
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// COMPONENTS
+import Nav from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import Lists from "./components/Lists";
 
 function App() {
+
   return (
     <div className="App">
-      return(
-        
-      )
-      <h1>Starter code is </h1>
+      <Nav />
+      <div className="content-container">
+        <Sidebar />
+        <Lists />
+      </div>
+
     </div>
   );
 }

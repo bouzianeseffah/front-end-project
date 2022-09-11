@@ -1,0 +1,47 @@
+
+/* General */
+hr {
+  width: auto;
+}
+
+
+/* Sidebar */
+.content-container {
+ display: flex;
+}
+
+.sidebar button {
+ margin: 1rem 0 1rem 1rem;
+ color: black;
+ background-color: transparent;
+ border: 1px solid rgb(13,202,240);
+ font-weight: bolder;
+}
+
+.d-none {
+ width: 30rem;
+}
+
+.offcanvas-header {
+ border-bottom: 1px solid rgb(13, 202, 240);
+}
+
+.offcanvas-title {
+ margin-left: 1rem;
+}
+
+.offcanvas-body {
+ margin: 0 1rem;
+ flex-grow: 0!important;
+ /* Working on padding in full width */
+ padding: 0 16px;
+}
+
+/* Lists */
+.lists-container {
+ padding: 1rem;
+}
+
+.list-card {
+ max-width: 100%;
+}
