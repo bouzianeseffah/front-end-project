@@ -45,3 +45,28 @@ hr {
 .list-card {
  max-width: 100%;
 }
+
+
+/* add name styles */
+
+.addName {
+ border-radius: 5px;
+ margin-left: 10px;
+ width: 10rem;
+ border: none;
+ padding: 3px;
+}
+
+.addName-button {
+ margin-left: 3px;
+ border: none;
+ border-radius: 5px;
+}
+
+.none {
+ display: none;
+}
+
+.show {
+ display: block;
+}
