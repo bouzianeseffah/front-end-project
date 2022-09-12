@@ -20,6 +20,11 @@ function Nav() {
           </Navbar.Brand>
           <Navbar.Brand >
             Welcome, name
+            <form>
+              <label>
+                <input type="text" placeholder="your name"/>
+              </label>
+            </form>
           </Navbar.Brand>
           {/* Light dark mode button */}
           <Navbar.Brand href="#home">
