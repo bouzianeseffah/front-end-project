@@ -3,6 +3,13 @@
 hr {
   width: auto;
 }
+#dark .offcanvas-body {
+  background-color: rgb(2, 39, 39);
+}
+ body{
+  background-color: green;
+
+}
 
 
 /* Sidebar */
@@ -45,3 +52,30 @@ hr {
 .list-card {
  max-width: 100%;
 }
+
+/* dark/light mode */
+#light{
+  background-color: #F3ebf6;
+
+}
+
+#dark{
+  background-color: #46045e;
+}
+
+.switch{
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#light .switch label{
+  color: #000
+}
+
+#dark .switch label{
+  color: rgb(243, 236, 236)
+}
+
