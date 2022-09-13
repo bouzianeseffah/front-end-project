@@ -46,6 +46,28 @@ hr {
  max-width: 100%;
 }
 
+.folder-container {
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.sidebar-delete-buttons {
+  border-radius: 3px;
+  border: 1px solid red!important;
+  color: red!important;
+  float: right;
+  margin: 0!important;
+  background-color: transparent!important;
+}
+
+.sidebar-edit-buttons {
+  border-radius: 3px;
+  border: 1px solid goldenrod !important;
+  color: goldenrod !important;
+  float: right;
+  margin: 0 5px 0 0 !important;
+  background-color: transparent!important;
+}
+
 
 /* add name styles */
 
