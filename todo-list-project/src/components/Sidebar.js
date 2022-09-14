@@ -22,6 +22,8 @@ function Sidebar(props) {
   });
   const [allTitles, setAllTitles] = useState([]);
 
+  const [showEdit, setShowEdit] = useState(false);
+
   const addTitle = (e) => {
     e.preventDefault()
     // creates new folder name
@@ -36,28 +38,73 @@ function Sidebar(props) {
   }
 
     // deletes current folder name
-  function deleteTodo(id){
+  function deleteTitle(id){
     setAllTitles(prevAllTitles => prevAllTitles.filter(note => note.id !== id));
     // console.log('value of id:', allTitles[0].id)
   } 
 
+  // Edits current folder name
+  function editTitle(event){
+    // console.log(inputName2())
+    setShowEdit(prevShowEdit => prevShowEdit === false ? true : false);
+    if(showEdit === false) {
+      console.log('editing', event, showEdit)
+    } else {
+      console.log('edited', event, showEdit)
+      // setAllTitles(prevTitles => prevTitles.map(prevTitles => {
+      //   return prevTitles.title === title.title
+      //   ? {...prevTitles, title: event} 
+      //   : prevTitles;
+      // }))
+      return allTitles
+    }
+  }
+
+  const inputName2 = (event) => {
+    console.log(event.currentTarget.value)
+    // return event.currentTarget.value;
+    setAllTitles(prevTitles => prevTitles.map(prevTitles => {
+        return prevTitles.title === title.title
+        ? {...prevTitles, title: event.currentTarget.value} 
+        : prevTitles;
+      }))
+  }
+
+
   // sets title name from input 
   const inputName = (event) => {
     setCreatedTitle(event.target.value);
-    console.log('value is:', event.target.value);
+    // console.log('value is:', event.target.value);
   }
   
-  // maps out our array and shows it in the browser
+  // iterates over our array and shows it in the browser
   const folderElements = allTitles.map((note) => (
     <>
       <p key={note.key} id={note.id}>
-        {note.title} 
-        <button type='button' className='sidebar-delete-buttons' onClick={() => deleteTodo(note.id)}>
+        {/* {note.title}  */}
+        {
+          showEdit === false ? note.title : <input 
+            type='text'
+            onChange={inputName2}
+            placeholder={note.title}
+            maxLength='15'/>
+        }
+
+        <button type='button' className='sidebar-delete-buttons' onClick={() => deleteTitle(note.id)}>
           Delete
         </button>
-        <button type='button' className='sidebar-edit-buttons'>
-          Edit
-        </button>
+
+        {
+          !showEdit
+          ?
+          <button type='button' className='sidebar-edit-buttons' onClick={() => editTitle(note.title)}>
+            Edit
+          </button>
+          :
+          <button type='button' className='sidebar-edit-buttons green' onClick={() => editTitle(note.title)}>
+            Confirm
+          </button>
+        }
       </p>
     </>
   ))

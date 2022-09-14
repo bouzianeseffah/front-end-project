@@ -68,6 +68,10 @@ hr {
   background-color: transparent!important;
 }
 
+.green {
+  color: green!important;
+  border: 1px solid green!important;
+}
 
 /* add name styles */
 
