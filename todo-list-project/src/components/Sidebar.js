@@ -2,50 +2,60 @@ import React, { useState } from 'react';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import {nanoid} from 'nanoid'
 
 // image
 import ArrowRight from '../images/arrow-right.svg'
 
-function Sidebar() {
+function Sidebar(props) {
+
+  // variables
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   
-  const [title, setTitle] = useState('')
-  const [allTitles, setAllTitles] = useState(['Note 1'])
-  
-  const handleClick = (e) => {
+  const [createdTitle, setCreatedTitle] = useState('');
+  const [title, setTitle] = useState({
+    title: '', 
+    key: nanoid(), 
+    id: nanoid()
+  });
+  const [allTitles, setAllTitles] = useState([]);
+
+  const addTitle = (e) => {
     e.preventDefault()
+    // creates new folder name
+    const newTitle = {
+      title: createdTitle,
+      key: nanoid(),
+      id: nanoid()
+    }
+    setAllTitles((prevAllTitles) => [newTitle, ...prevAllTitles]);
     // Clears input when entered
-    console.log(title)
-    setTitle(prevTitle => prevTitle = '')
-
-    // add notes button
-    setAllTitles(prevAllTitles => [title, ...allTitles])
-    console.log(allTitles)
+    setCreatedTitle(prevTitle => prevTitle = '')
   }
 
-  // deletes current Folder
-  const deleteClick = () => {
-    // setAllTitles([...title].filter(currentId => currentId.id !== id))
-    console.log(allTitles.id)
-  }
+    // deletes current folder name
+  function deleteTodo(id){
+    setAllTitles(prevAllTitles => prevAllTitles.filter(note => note.id !== id));
+    // console.log('value of id:', allTitles[0].id)
+  } 
 
-
-
+  // sets title name from input 
   const inputName = (event) => {
-    setTitle(event.target.value);
+    setCreatedTitle(event.target.value);
+    console.log('value is:', event.target.value);
   }
   
-  const folderElements = allTitles.map((note, index) => (
+  // maps out our array and shows it in the browser
+  const folderElements = allTitles.map((note) => (
     <>
-      <p>
-        {note} 
-        {/* {index + 1} */}
-        <button className='sidebar-delete-buttons' onClick={deleteClick}>
+      <p key={note.key} id={note.id}>
+        {note.title} 
+        <button type='button' className='sidebar-delete-buttons' onClick={() => deleteTodo(note.id)}>
           Delete
         </button>
-        <button className='sidebar-edit-buttons'>
+        <button type='button' className='sidebar-edit-buttons'>
           Edit
         </button>
       </p>
@@ -70,14 +80,15 @@ function Sidebar() {
         <div className='folder-container'>
           <form>
           <input
-            value={title}
+            type='text'
+            value={createdTitle}
             onChange={inputName}
             maxLength='15'
           />
           <button 
             type='button'
             className='add-folder-title'
-            onClick={handleClick}
+            onClick={addTitle}
           >Add</button>
           </form>
           <br/>
