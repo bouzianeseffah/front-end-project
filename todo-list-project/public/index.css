@@ -3,7 +3,7 @@
 hr {
   width: auto;
 }
-#dark .offcanvas-body {
+#darklight .offcanvas-body {
   background-color: rgb(51, 1, 167);
 }
  body{
@@ -59,11 +59,14 @@ hr {
 
 }
 
-#dark{
+#darklight{
   background-color: #46045e;
 }
 
 .switch{
+  position: relative;
+  left: 600px;
+  bottom: 100px;
   width: 100vw;
   height: 100px;
   display: flex;
@@ -75,7 +78,7 @@ hr {
   color: #000
 }
 
-#dark .switch label{
+#darklight .switch label{
   color: rgb(243, 236, 236)
 }
 
