@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../images/Docket.png'
-
-function Nav() {
+function Nav(props) {
 
   const [nameInForm, setNameInForm] = useState('')
   const [show, setShow] = useState(true)
@@ -20,10 +19,10 @@ function Nav() {
     // console.log(show)
   }
 
-  
+
   return (
     <div className="Nav">
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="white" variant="dark">
         <Container>
           <Navbar.Brand href="#home">
             <img
@@ -56,7 +55,7 @@ function Nav() {
                 <span>✔️</span>
               </button>
             </form>
-
+            
             <div className={show ? 'none' : 'show'}>
               <span className="name">Welcome, {nameInForm} </span>
               <button 
@@ -69,11 +68,9 @@ function Nav() {
               </button>
             </div>
           </Navbar.Brand>
-
+         
           {/* Light dark mode button */}
-          <Navbar.Brand href="#home">
-            Light/Dark Mode
-          </Navbar.Brand>
+         
         </Container>
       </Navbar>
     </div>

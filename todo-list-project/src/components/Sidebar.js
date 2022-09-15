@@ -3,12 +3,30 @@ import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import {nanoid} from 'nanoid'
-
+import { Fragment } from 'react';
 // image
 import ArrowRight from '../images/arrow-right.svg'
 
 function Sidebar(props) {
-
+  const { onCreate } = props
+     
+    const [book, setBook] = useState({
+        title: "",
+        description: "",
+        done: false
+    })
+ 
+    const onChange = (e) => {
+        setBook({
+            ...book,
+            [e.target.name]: e.target.value
+        })
+    }
+ 
+    const saveTodo = (e) => {
+        e.preventDefault()
+        onCreate(book)
+    }
   // variables
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -63,7 +81,8 @@ function Sidebar(props) {
   ))
 
   return (
-    <div className='sidebar'>
+    <Fragment>
+      <div className='sidebar'>
       <Button className="d-lg-none sidebar-popout-button" onClick={handleShow}>
         <img src={ArrowRight} width='20rem' height='20rem' />
       </Button>
@@ -74,31 +93,42 @@ function Sidebar(props) {
 
       <Offcanvas show={show} onHide={handleClose} responsive="lg">
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Notes</Offcanvas.Title>
+          <Offcanvas.Title className="text-center m-3">Notes</Offcanvas.Title>
         </Offcanvas.Header>
 
         <div className='folder-container'>
-          <form>
-          <input
-            type='text'
-            value={createdTitle}
-            onChange={inputName}
-            maxLength='15'
-          />
-          <button 
-            type='button'
-            className='add-folder-title'
-            onClick={addTitle}
-          >Add</button>
+          <form onSubmit={ saveTodo}>
+               <div className="col-3 m-1">
+                  <input className="form-control"
+                    type='text'
+                    placeholder='Title'
+                    name='title'
+                    onChange={(e) => onChange(e) }
+                    maxLength='15'
+                  />
+               </div>
+               <div className="col-5 d-flex justify-content-center m-1"> 
+                  <input className="form-control"
+                    type='text'
+                    name='description'
+                    onChange={(e) => onChange(e) }
+                    maxLength='15'
+                  />
+               </div>
+         
+        
+          <button  className='btn btn-primary col-2 d-flex justify-content-center m-1'type='submit'>Add</button>
           </form>
           <br/>
 
-          {folderElements}
+         
 
         </div>
 
       </Offcanvas>
     </div>
+    </Fragment>
+    
   );
 }
 
