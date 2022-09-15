@@ -8,6 +8,26 @@ import {nanoid} from 'nanoid'
 import ArrowRight from '../images/arrow-right.svg'
 
 function Sidebar(props) {
+  // link to back-end 
+  const { onCreate } = props
+
+  const [variables, setVariables] = useState({
+    title: '',
+    description: '',
+    done: false
+  });
+
+  const onChange = (e) => {
+    setVariables({
+      ...variables,
+      [e.target.name]: e.target.value
+    })
+  };
+
+  const saveTodo = (e) => {
+    e.preventDefault() 
+    onCreate(variables)
+  }
 
   // variables
   const [show, setShow] = useState(false);
@@ -129,8 +149,11 @@ function Sidebar(props) {
           <input
             type='text'
             value={createdTitle}
-            onChange={inputName}
+            // onChange={inputName}
             maxLength='15'
+            // back-end-code 
+            name='title'
+            onChange={(e) => onChange(e)}
           />
           <button 
             type='button'
