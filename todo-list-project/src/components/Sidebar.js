@@ -125,7 +125,7 @@ function Sidebar(props) {
         </Offcanvas.Header>
 
         <div className='folder-container'>
-          <form>
+          <form onSubmit={saveTodo}>
           <input
             type='text'
             value={createdTitle}
