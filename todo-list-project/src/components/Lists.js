@@ -3,7 +3,11 @@ import Card from 'react-bootstrap/Card';
 
 
 export default function Lists(props) {
-  const { todos } = props
+  {/* onUpdate function that invoke the bakc-end patch api whenever the user clicks on 
+the check/uncheck icon  */}
+{/* onDelete function to delete data from mangoDb whenever the user 
+click on the delete button  */}
+  const { todos, onUpdate, onDelete } = props
  return (
   <div className="lists-container">
    <Card border="info" className="list-card">
@@ -30,7 +34,7 @@ export default function Lists(props) {
                                     <td>{todo.title}</td>
                                     <td>{todo.description}</td>
                                     <td>{todo.createdOn}</td>
-                                    <td>
+                                    <td onClick={() => onUpdate(todo._id, todo.done)}>
                                         {
                                             (todo.done) ? 
                                             (<img width="25" src="http://pluspng.com/img-png/green-tick-png-hd-open-2000.png" />) 
@@ -39,7 +43,9 @@ export default function Lists(props) {
                                         }
                                     </td>
                                     <td>
-                                        <button className='btn btn-danger'>Delete</button>
+                                        <button className='btn btn-danger'
+                                          onClick={() => onDelete(todo._id)}>
+                                          Delete</button>
                                     </td>
                                 </tr>
                             )

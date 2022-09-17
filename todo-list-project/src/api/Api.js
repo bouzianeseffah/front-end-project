@@ -1,12 +1,12 @@
 const API_URL = 'http://localhost:5000/todo';
- 
+ // get data from the back-end
 export async function getTodosAPI(){
     return fetch(API_URL)
     .then(resp => resp.json())
     .then(data => data)
     .catch(e => console.log(e))
 }
- 
+//post data
 export async function postTodosAPI(todo){
     return fetch(API_URL,{
         method: "POST",
@@ -21,7 +21,7 @@ export async function postTodosAPI(todo){
     .then(data => data)
     .catch(e => console.log(e))
 }
- 
+// update data
 export async function patchTodosAPI(id, done){
     let todo = {
         _id: id,
@@ -38,7 +38,7 @@ export async function patchTodosAPI(id, done){
     .then(data => data)
     .catch(e => console.log(e))
 }
- 
+ //delete data
 export async function deleteTodosAPI(id){
     return fetch(API_URL+`/${id}`,{
         method: "DELETE"
