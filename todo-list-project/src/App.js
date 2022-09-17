@@ -17,7 +17,7 @@ export const ThemeContext = createContext('null')
 function App() {
     const [theme, setTheme] = useState("light");
   const toggleTheme = () =>{
-    setTheme((curr) => (curr === "light" ? "darklight": "light"));
+    setTheme((curr) => (curr === "light" ? "dark": "light"));
   };
 
   return (
@@ -27,8 +27,8 @@ function App() {
 
         />
         <div className="switch"> 
-            <label>{theme === "light"? "light mode": "dark mode"}</label>
-            <ReactSwitch onChange={toggleTheme} checked={theme === "darklight"}/>
+            <label>{theme === "light"? "Light Mode": "Dark Mode"}</label>
+            <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
         </div>
         <div className="content-container">
           <Sidebar />

@@ -3,12 +3,8 @@
 hr {
   width: auto;
 }
-#darklight .offcanvas-body {
+#dark .offcanvas-body {
   background-color: rgb(51, 1, 167);
-}
- body{
-  background-color: green;
-
 }
 
 
@@ -17,9 +13,13 @@ hr {
  display: flex;
 }
 
+.nav {
+  background-color: blue;
+}
+
 .sidebar button {
  margin: 1rem 0 1rem 1rem;
- color: black;
+ color: rgb(7, 7, 7);
  background-color: transparent;
  border: 1px solid rgb(13,202,240);
  font-weight: bolder;
@@ -47,6 +47,12 @@ hr {
 /* Lists */
 .lists-container {
  padding: 1rem;
+ position: relative;
+ bottom: 80px;
+ left: 45px;
+ font-family:  sans-serif;
+ width: 60%;
+ height: 100vh;
 }
 
 .list-card {
@@ -59,13 +65,14 @@ hr {
 
 }
 
-#darklight{
+#dark{
   background-color: #46045e;
 }
 
+/* dark mode */
 .switch{
   position: relative;
-  left: 600px;
+  left: 550px;
   bottom: 100px;
   width: 100vw;
   height: 100px;
@@ -75,10 +82,10 @@ hr {
 }
 
 #light .switch label{
-  color: #000
+  color: rgb(235, 234, 236)
 }
 
-#darklight .switch label{
+#dark .switch label{
   color: rgb(243, 236, 236)
 }
 
