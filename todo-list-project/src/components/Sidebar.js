@@ -111,6 +111,16 @@ function Sidebar(props) {
                   <input className="form-control"
                     type='text'
                     name='description'
+                    placeholder='description'
+                    onChange={(e) => onChange(e) }
+                    maxLength='15'
+                  />
+               </div>
+               <div className="col-5 d-flex justify-content-center m-1"> 
+                  <input className="form-control"
+                    type='text'
+                    name='createdOn'
+                    placeholder='createdOn'
                     onChange={(e) => onChange(e) }
                     maxLength='15'
                   />
@@ -119,9 +129,10 @@ function Sidebar(props) {
         
           <button  className='btn btn-primary col-2 d-flex justify-content-center m-1'type='submit'>Add</button>
           </form>
+          
           <br/>
 
-         
+          {folderElements}
 
         </div>
 
