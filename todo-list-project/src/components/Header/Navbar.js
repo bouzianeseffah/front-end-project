@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../images/Docket.png";
+import logo from "../../images/Docket.png";
 import { Link } from "react-router-dom";
 
 function Nav() {
@@ -32,7 +32,9 @@ function Nav() {
               height="30"
               className="d-inline-block align-top"
             />{" "}
-            <Link to="/">Docket</Link>
+            <Link to="/" className="navbar-text-style">
+              Docket
+            </Link>
           </Navbar.Brand>
 
           <Navbar.Brand>
@@ -52,7 +54,9 @@ function Nav() {
                 onClick={handleSubmit}
                 // onMouseDown={handleClose}
               >
-                <span>✔️</span>
+                <span role="img" aria-label="check mark">
+                  ✔️
+                </span>
               </button>
             </form>
 
@@ -64,13 +68,19 @@ function Nav() {
                 onClick={handleSubmit}
                 // onMouseDown={handleShow}
               >
-                <span>✏️</span>
+                <span role="img" aria-label="pencil image">
+                  ✏️
+                </span>
               </button>
             </div>
           </Navbar.Brand>
           <div>
-            <Link to="/mynotes" style={{ margin: "0 10px 0 0" }}>
-              My Notes
+            <Link
+              to="/mynotes"
+              className="navbar-text-style"
+              style={{ margin: "0 10px 0 0" }}
+            >
+              Notes
             </Link>
             {/* Light dark mode button */}
             <Navbar.Brand href="#home">Mode</Navbar.Brand>

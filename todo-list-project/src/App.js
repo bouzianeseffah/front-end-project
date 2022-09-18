@@ -1,14 +1,13 @@
 // DEPENDENCIES
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // COMPONENTS
-import Nav from "./components/Navbar";
-import LandingPage from "./components/LandingPage/LandingPage";
-// import MyNotes from "./components/MyNotes/MyNotes";
-// import Sidebar from "./components/Sidebar";
-import Lists from "./components/Lists";
+import Nav from "./components/Header/Navbar";
+import LandingPage from "./views/LandingPage/LandingPage";
+import MyNotes from "./views/MyNotes";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -23,8 +22,8 @@ function App() {
         </Route>
       </Switch> */}
       <Route path="/" component={LandingPage} exact />
-      <Route path="/mynotes" component={Lists} />
-      <Link to="/newnote">Lists</Link>
+      <Route path="/mynotes" component={MyNotes} />
+      <Footer />
     </BrowserRouter>
   );
 }
