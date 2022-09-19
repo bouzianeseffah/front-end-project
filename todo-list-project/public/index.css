@@ -1,0 +1,121 @@
+/* General */
+hr {
+  width: auto;
+}
+
+/* Navbar */
+.navbar-text-style {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.navbar-text-style:hover {
+  color: white;
+}
+
+/* Sidebar */
+.content-container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar button {
+  margin: 1rem 0 1rem 1rem;
+  color: black;
+  background-color: transparent;
+  border: 1px solid rgb(13, 202, 240);
+  font-weight: bolder;
+}
+
+.d-none {
+  width: 30rem;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid rgb(13, 202, 240);
+}
+
+.offcanvas-title {
+  margin-left: 1rem;
+}
+
+.offcanvas-body {
+  margin: 0 1rem;
+  flex-grow: 0 !important;
+  /* Working on padding in full width */
+  padding: 0 16px;
+}
+
+/* Lists */
+.lists-container {
+  padding: 1rem;
+}
+
+.list-card {
+  max-width: 100%;
+}
+
+.folder-container {
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.sidebar-delete-buttons {
+  border-radius: 3px;
+  border: 1px solid red !important;
+  color: red !important;
+  float: right;
+  margin: 0 !important;
+  background-color: transparent !important;
+}
+
+.sidebar-edit-buttons {
+  border-radius: 3px;
+  border: 1px solid goldenrod !important;
+  color: goldenrod !important;
+  float: right;
+  margin: 0 5px 0 0 !important;
+  background-color: transparent !important;
+}
+
+.green {
+  color: green !important;
+  border: 1px solid green !important;
+}
+
+/* add name styles */
+
+.addName {
+  border-radius: 5px;
+  margin-left: 10px;
+  width: 10rem;
+  border: none;
+  padding: 3px;
+}
+
+.addName-button {
+  margin-left: 3px;
+  border: none;
+  border-radius: 5px;
+}
+
+.none {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* FOOTER */
+
+.Footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.copyright {
+  font-size: 1rem;
+  opacity: 0.7;
+}
