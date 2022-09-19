@@ -3,14 +3,21 @@
 hr {
   width: auto;
 }
-#dark .offcanvas-body {
-  background-color: rgb(51, 1, 167);
-}
-
 
 /* Sidebar */
 .content-container {
  display: flex;
+ justify-items: center;
+ width: 80%;
+ position: relative;
+ bottom: 80px;
+ left: 150px;
+ font-family:  sans-serif;
+ height: 35%;
+}
+
+#dark .content-container{
+  background-color: rgb(162, 119, 175);
 }
 
 .nav {
@@ -25,6 +32,7 @@ hr {
  font-weight: bolder;
 }
 
+/* Notes */
 .d-none {
  width: 30rem;
 }
@@ -47,12 +55,11 @@ hr {
 /* Lists */
 .lists-container {
  padding: 1rem;
- position: relative;
- bottom: 80px;
- left: 45px;
- font-family:  sans-serif;
- width: 60%;
- height: 100vh;
+ 
+}
+
+#dark .lists-containe{
+  color: aliceblue;
 }
 
 .list-card {
@@ -69,7 +76,6 @@ hr {
   background-color: #46045e;
 }
 
-/* dark mode */
 .switch{
   position: relative;
   left: 550px;

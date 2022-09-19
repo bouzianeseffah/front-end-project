@@ -1,9 +1,32 @@
-import React,{useState} from "react";
+import { response } from "express";
+import React,{useState, useEffect} from "react";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../images/Docket.png'
+import Axios from "axios"
 
 function Nav() {
+  // added use State 
+  const [name, setName] = useState("")
+  const [listOfusers, setlistOfusers] = useState([])
+
+
+// Added use Effect stat
+  useEffect(() =>{
+    // Here is API call
+    Axios.get("URI").then((response) =>{
+      setlistOfusers(response.data)
+    })
+
+  },[])
+
+  const addName = () => {
+    Axios.post("backend URI needed here",{
+      name,
+    }).then((response) => {
+      alert("name added")
+    });
+  }
   return (
       <div className="Nav">
         <Navbar bg="dark" variant="dark">
@@ -22,7 +45,10 @@ function Nav() {
               Welcome, name
               <form>
                 <label>
-                  <input type="text" placeholder="your name"/>
+                  {/* Added name input */}
+                  <input type="text" 
+                  placeholder="name..." 
+                  onChange={(event) =>{setName(event.target.value);}}/>
                 </label>
               </form>
             </Navbar.Brand>
