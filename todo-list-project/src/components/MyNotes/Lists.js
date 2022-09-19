@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Card from "react-bootstrap/Card";
-import axios from "axios";
+// import axios from "axios";
 import data from "../data/data";
 
 export default function Lists() {

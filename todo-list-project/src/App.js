@@ -1,5 +1,5 @@
 // DEPENDENCIES
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -11,20 +11,14 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Nav />
-      {/* <Switch>
-        <Route path="/" exact>
-          <LandingPage />
-        </Route>
-        <Route path="/mynotes">
-          <Lists />
-        </Route>
-      </Switch> */}
-      <Route path="/" component={LandingPage} exact />
-      <Route path="/mynotes" component={MyNotes} />
+      <Routes>
+        <Route path="/" exact element={<LandingPage />}></Route>
+        <Route path="/mynotes" element={<MyNotes />}></Route>
+      </Routes>
       <Footer />
-    </BrowserRouter>
+    </Router>
   );
 }
 

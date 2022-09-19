@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../../images/Docket.png";
-import { Link } from "react-router-dom";
+import { Link, Router } from "react-router-dom";
 
 function Nav() {
   const [nameInForm, setNameInForm] = useState("");
@@ -83,7 +83,7 @@ function Nav() {
               Notes
             </Link>
             {/* Light dark mode button */}
-            <Navbar.Brand href="#home">Mode</Navbar.Brand>
+            <Navbar.Brand>Mode</Navbar.Brand>
           </div>
         </Container>
       </Navbar>
