@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, ReactSwitch } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../../images/Docket.png";
-import { Link, Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Nav() {
+function Nav(props) {
   const [nameInForm, setNameInForm] = useState("");
   const [show, setShow] = useState(true);
 
@@ -83,7 +83,17 @@ function Nav() {
               Notes
             </Link>
             {/* Light dark mode button */}
-            <Navbar.Brand>Mode</Navbar.Brand>
+            <Navbar.Brand>
+              <div className="switch">
+                <label>
+                  {props.theme === "light" ? "Light Mode" : "Dark Mode"}
+                  <ReactSwitch
+                    onChange={props.toggleTheme}
+                    checked={props.theme === "dark"}
+                  />
+                </label>
+              </div>
+            </Navbar.Brand>
           </div>
         </Container>
       </Navbar>
