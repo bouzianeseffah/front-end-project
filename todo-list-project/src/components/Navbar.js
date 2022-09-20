@@ -1,4 +1,3 @@
-import { response } from "express";
 import React,{useState, useEffect} from "react";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
@@ -46,9 +45,11 @@ function Nav() {
               <form>
                 <label>
                   {/* Added name input */}
-                  <input type="text" 
-                  placeholder="name..." 
-                  onChange={(event) =>{setName(event.target.value);}}/>
+                  <div> 
+                    <input type="text" 
+                    placeholder="name..." 
+                    onChange={(event) =>{setName(event.target.value);}}/>
+                  </div>
                 </label>
               </form>
             </Navbar.Brand>
