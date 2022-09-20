@@ -83,7 +83,7 @@ export default function Lists() {
                   </button>
                 )}
               </Card.Title>
-              <Card.Text>{note.content}</Card.Text>
+              <Card.Text>{note.description}</Card.Text>
             </Card.Body>
           </Card>
           <br />
