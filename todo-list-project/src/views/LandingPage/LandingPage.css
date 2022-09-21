@@ -7,6 +7,34 @@
   background-size: cover !important;
 }
 
+/* dark/light mode */
+#light{
+  background-color: #F3ebf6;
+
+}
+
+#dark{
+  background-color: #09000c;
+}
+
+#light .lists-container{
+  background-color: rgb(51, 136, 72);
+}
+
+
+.switch{
+  position: relative;
+  top: 180px;
+  left: 1100px;
+  width: 100vw;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+#dark .lists-container {
+  background-color: rgb(3, 54, 6);
+}
+
 .title {
   font-size: 70px;
 }
@@ -14,6 +42,13 @@
 .subtitle {
   font-size: 25px;
   padding-top: 10px;
+}
+
+#light .switch label{
+  color: rgb(3, 0, 8)
+}
+#dark .switch label{
+  color: rgb(7, 1, 17)
 }
 
 .intro-text {
@@ -30,6 +65,14 @@
 .landingbutton {
   width: 100px;
   height: 55px;
+}
+/* FOOTER */
+
+.Footer {
+  position: absolute;
+  bottom: 0;
+  top: 900px;
+  width: 100%;
 }
 
 @media only screen and (min-width: 900px) {

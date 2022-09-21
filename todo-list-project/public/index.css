@@ -3,9 +3,8 @@ hr {
   width: auto;
 }
 
-<<<<<<< HEAD
 /* Sidebar */
-.content-container {
+/* .content-container {
  display: flex;
  justify-items: center;
  width: 80%;
@@ -14,15 +13,13 @@ hr {
  left: 150px;
  font-family:  sans-serif;
  height: 35%;
-}
+} */
 
 #dark .content-container{
-  background-color: rgb(162, 119, 175);
+  background-color: rgb(12, 11, 12);
 }
 
-.nav {
-  background-color: blue;
-}
+
 
 .sidebar button {
  margin: 1rem 0 1rem 1rem;
@@ -30,7 +27,7 @@ hr {
  background-color: transparent;
  border: 1px solid rgb(13,202,240);
  font-weight: bolder;
-=======
+}
 /* Navbar */
 .navbar-text-style {
   color: white;
@@ -54,7 +51,6 @@ hr {
   background-color: transparent;
   border: 1px solid rgb(13, 202, 240);
   font-weight: bolder;
->>>>>>> 1fef7bcdefa83aafba3938260c2c3dd799d02516
 }
 
 /* Notes */
@@ -79,16 +75,13 @@ hr {
 
 /* Lists */
 .lists-container {
-<<<<<<< HEAD
- padding: 1rem;
+ padding: 3rem;
  
 }
 
 #dark .lists-containe{
   color: aliceblue;
-=======
   padding: 1rem;
->>>>>>> 1fef7bcdefa83aafba3938260c2c3dd799d02516
 }
 
 .list-card {
@@ -151,6 +144,7 @@ hr {
 .Footer {
   position: absolute;
   bottom: 0;
+  top: 900px;
   width: 100%;
 }
 
@@ -171,17 +165,16 @@ hr {
 
 .switch{
   position: relative;
-  left: 550px;
-  bottom: 100px;
+  top: 150px;
+  left: 300px;
   width: 100vw;
   height: 100px;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #light .switch label{
-  color: rgb(235, 234, 236)
+  color: rgb(99, 2, 255)
 }
 
 #dark .switch label{
