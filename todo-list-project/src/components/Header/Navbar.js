@@ -20,6 +20,15 @@ function Nav() {
     // console.log(show)
   }
 
+  // const [dark, setDark] = useState("dark");
+
+  // function handleDarkMode() {
+  //   setDark((prevDark) => {
+  //     prevDark === "dark" ? "light" : "dark";
+  //   });
+  //   console.log(dark);
+  // }
+
   return (
     <div className="Nav">
       <Navbar bg="dark" variant="dark">
@@ -83,7 +92,9 @@ function Nav() {
               Notes
             </Link>
             {/* Light dark mode button */}
-            <Navbar.Brand>Mode</Navbar.Brand>
+            <Navbar.Brand>
+              {/* <button onClick={handleDarkMode}>Mode</button> */}
+            </Navbar.Brand>
           </div>
         </Container>
       </Navbar>
