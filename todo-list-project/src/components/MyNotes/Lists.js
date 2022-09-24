@@ -151,6 +151,12 @@ export default function Lists() {
                   >
                     Delete
                   </button>
+
+                )}
+              </Card.Title>
+              <Card.Text>{note.description}</Card.Text>
+            </Card.Body>
+          </Card>
                   {!showEdit ? (
                     <button
                       style={{
@@ -182,7 +188,7 @@ export default function Lists() {
             </Card>
           </div>
           <br />
-        </>
+        
       ))}
     </div>
   );

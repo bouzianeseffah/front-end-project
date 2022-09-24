@@ -1,3 +1,4 @@
+
 import Sidebar from "../components/MyNotes/Sidebar2";
 import Lists from "../components/MyNotes/Lists2";
 import React, { useState, useEffect } from "react";
@@ -43,7 +44,35 @@ const MyNotes = () => {
       <Sidebar onCreate={addTodo} />
       <Lists todos={todos} onUpdate={updateTodo} onDelete={deleteTodo} />
     </div>
+
+    
   );
 };
 
 export default MyNotes;
+
+// function App() {
+//     const [theme, setTheme] = useState("light");
+//   const toggleTheme = () =>{
+//     setTheme((curr) => (curr === "light" ? "dark": "light"));
+//   };
+
+//   return (
+
+//     <ThemeContext.Provider value={{theme, toggleTheme}}>
+//       <div className="App" id={theme} >
+
+//         <Nav/>
+
+//         <div className="switch">
+//             <label>{theme === "light"? "Light Mode": "Dark Mode"}</label>
+//         </div>
+
+//         <div className="content-container">
+//           <Sidebar />
+//           <Lists />
+//         </div>
+
+//         </div>
+//       </ThemeContext.Provider>
+// )

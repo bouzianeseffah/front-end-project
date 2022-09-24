@@ -1,5 +1,8 @@
 // DEPENDENCIES
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import React, { useState, ThemeContext } from "react";
+
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -15,6 +18,11 @@ import {
   deleteTodosAPI,
 } from "./api/api";
 
+function App() {
+  const [theme, setTheme] = useState("light");
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
 function App() {
   const [todos, setTodos] = useState([]);
   //useEffect on getTodosApi to get data and display it on lists.js
@@ -50,8 +58,15 @@ function App() {
     <Router>
       <Nav />
       <Routes>
-        <Route path="/" exact element={<LandingPage />}></Route>
-        <Route path="/mynotes" element={<MyNotes />}></Route>
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+          <div className="App" id={theme}>
+            <div className="content-container">
+              <Route path="/" exact element={<LandingPage />}></Route>
+              <Route path="/mynotes" element={<MyNotes />}></Route>
+            </div>
+          </div>
+        </ThemeContext.Provider>
+        
       </Routes>
       <Footer />
     </Router>
@@ -59,3 +74,17 @@ function App() {
 }
 
 export default App;
+
+{
+  /* <ThemeContext.Provider value={{ theme, toggleTheme }}>
+  <div className="App" id={theme}>
+    <div className="switch">
+          <label>{theme === "light" ? "Light Mode" : "Dark Mode"}</label>
+        </div>
+    <div className="content-container">
+      <Sidebar />
+      <Lists />
+    </div>
+  </div>
+</ThemeContext.Provider>; */
+}

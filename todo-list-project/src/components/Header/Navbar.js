@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, ReactSwitch } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../../images/Docket.png";
-import { Link, Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Nav() {
+function Nav(props) {
   const [nameInForm, setNameInForm] = useState("");
   const [show, setShow] = useState(true);
 
@@ -22,12 +22,7 @@ function Nav() {
 
   // const [dark, setDark] = useState("dark");
 
-  // function handleDarkMode() {
-  //   setDark((prevDark) => {
-  //     prevDark === "dark" ? "light" : "dark";
-  //   });
-  //   console.log(dark);
-  // }
+  
 
   return (
     <div className="Nav">
@@ -93,7 +88,6 @@ function Nav() {
             </Link>
             {/* Light dark mode button */}
             <Navbar.Brand>
-              {/* <button onClick={handleDarkMode}>Mode</button> */}
             </Navbar.Brand>
           </div>
         </Container>
