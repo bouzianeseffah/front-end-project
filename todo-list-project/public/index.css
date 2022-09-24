@@ -3,17 +3,6 @@ hr {
   width: auto;
 }
 
-/* Sidebar */
-/* .content-container {
- display: flex;
- justify-items: center;
- width: 80%;
- position: relative;
- bottom: 80px;
- left: 150px;
- font-family:  sans-serif;
- height: 35%;
-} */
 
 #dark .content-container{
   background-color: rgb(12, 11, 12);

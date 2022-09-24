@@ -14,7 +14,7 @@ function Sidebar(props) {
 
   // fetches the data from the url
   const fetchNotes = async () => {
-    const data = await axios.get("http://localhost:8080/");
+    const data = await axios.get("http://localhost:27017/");
     setNotes(data);
   };
 

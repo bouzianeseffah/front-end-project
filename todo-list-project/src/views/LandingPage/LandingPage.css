@@ -9,12 +9,12 @@
 
 /* dark/light mode */
 #light{
-  background-color: #0f0114;
+  background-color: #eae4ec;
 
 }
 
 #dark{
-  background-color: #09000c;
+  background-color: #200429;
 }
 
 #light .lists-container{
