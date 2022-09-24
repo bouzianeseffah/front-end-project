@@ -20,6 +20,10 @@ function Nav(props) {
     // console.log(show)
   }
 
+  // const [dark, setDark] = useState("dark");
+
+  
+
   return (
     <div className="Nav">
       <Navbar bg="dark" variant="dark">
@@ -84,15 +88,6 @@ function Nav(props) {
             </Link>
             {/* Light dark mode button */}
             <Navbar.Brand>
-              <div className="switch">
-                <label>
-                  {props.theme === "light" ? "Light Mode" : "Dark Mode"}
-                  <ReactSwitch
-                    onChange={props.toggleTheme}
-                    checked={props.theme === "dark"}
-                  />
-                </label>
-              </div>
             </Navbar.Brand>
           </div>
         </Container>

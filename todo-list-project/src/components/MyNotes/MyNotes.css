@@ -1,0 +1,58 @@
+.btn-style {
+  background-color: transparent;
+  border: 1px solid cyan;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: bolder;
+  margin: 1rem;
+}
+
+.new-note {
+  background-color: transparent;
+  border: 1px solid cyan;
+  border-radius: 6px;
+  padding: 5px 10px;
+  /* position: absolute; */
+  top: 0;
+  right: 0;
+  font-weight: bolder;
+  margin: 1rem;
+}
+
+.header-container {
+  /* position: relative; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.lists-container {
+  margin-bottom: 2rem;
+}
+
+.lists-container textarea {
+  width: 100%;
+  max-width: 30rem;
+}
+
+.add-folder-title {
+  background-color: transparent;
+  border: 1px solid cyan;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-weight: 100;
+}
+
+.folder-heading {
+  margin: 0 0 1rem 1rem;
+}
+
+#show {
+  display: block;
+}
+
+#none {
+  display: none;
+}

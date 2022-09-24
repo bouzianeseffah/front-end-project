@@ -3,41 +3,27 @@ import React, { useState, useEffect } from "react";
 import { Alert, Button, Offcanvas } from "react-bootstrap";
 import { nanoid } from "nanoid";
 import axios from "axios";
+import "./MyNotes.css";
 
 // image
 import ArrowRight from "../../images/arrow-right.svg";
 
 function Sidebar(props) {
-  // link to back-end ------------------------------------
   // stores the data from the url
   const [notes, setNotes] = useState([]);
-
-  // fetches the data from the url
-  const fetchNotes = async () => {
-    const data = await axios.get("http://localhost:8080/");
-    setNotes(data);
-  };
-
-  useEffect(() => {
-    fetchNotes();
-  }, []);
-  // link to back-end --------------------------------------
 
   // VARIABLES
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
   const [createdTitle, setCreatedTitle] = useState("");
-  // const [title, setTitle] = useState({
-  //   title: "",
-  //   key: nanoid(),
-  //   id: nanoid(),
-  // });
-  const [allTitles, setAllTitles] = useState([]);
-
+  const [allTitles, setAllTitles] = useState({
+    title: "",
+    description: "",
+    id: "",
+    key: "",
+  });
   const [showEdit, setShowEdit] = useState(false);
-  // VARIABLES
 
   const addTitle = (e) => {
     e.preventDefault();
@@ -68,26 +54,9 @@ function Sidebar(props) {
       console.log("editing", event, showEdit);
     } else {
       console.log("edited", event, showEdit);
-      // setAllTitles(prevTitles => prevTitles.map(prevTitles => {
-      //   return prevTitles.title === title.title
-      //   ? {...prevTitles, title: event}
-      //   : prevTitles;
-      // }))
       return allTitles;
     }
   }
-
-  // const inputName2 = (event) => {
-  //   console.log(event.currentTarget.value);
-  //   // return event.currentTarget.value;
-  //   setAllTitles((prevTitles) =>
-  //     prevTitles.map((prevTitles) => {
-  //       return prevTitles.title === title.title
-  //         ? { ...prevTitles, title: event.currentTarget.value }
-  //         : prevTitles;
-  //     })
-  //   );
-  // };
 
   // sets title name from input
   const inputName = (event) => {
