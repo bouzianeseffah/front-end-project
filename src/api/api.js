@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/todo";
+const API_URL = "https://todolist-project-backend.herokuapp.com/todo";
 // get data from the back-end
 export async function getTodosAPI() {
   return fetch(API_URL)

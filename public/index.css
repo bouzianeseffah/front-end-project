@@ -28,7 +28,6 @@ hr {
   font-weight: bolder;
 }
 
-/* Notes */
 .d-none {
   width: 30rem;
 }
@@ -51,10 +50,6 @@ hr {
 /* Lists */
 .lists-container {
   padding: 1rem;
-}
-
-#dark .lists-containe {
-  color: aliceblue;
 }
 
 .list-card {
@@ -124,32 +119,4 @@ hr {
 .copyright {
   font-size: 1rem;
   opacity: 0.7;
-}
-
-/* dark/light mode */
-#light {
-  background-color: #f3ebf6;
-}
-
-#dark {
-  background-color: #46045e;
-}
-
-.switch {
-  position: relative;
-  left: 550px;
-  bottom: 100px;
-  width: 100vw;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#light .switch label {
-  color: rgb(235, 234, 236);
-}
-
-#dark .switch label {
-  color: rgb(243, 236, 236);
 }
